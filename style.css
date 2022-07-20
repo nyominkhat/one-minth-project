@@ -69,23 +69,16 @@ ul {
   text-decoration: underline;
 }
 
-.icon {
-  position: relative;
-}
-
 .cart {
-  width: 1.8rem;
-  height: 1.8rem;
-  position: absolute;
-  right: 4.5em;
-  bottom: 1em;
+  width: 100%;
+  padding: 0 3em;
 }
 
-.user-avatar {
+/* .user-avatar {
   margin-left: 2em;
   width: 3rem;
   height: 3rem;
-}
+} */
 
 .hero-left {
   width: 100%;
@@ -165,9 +158,6 @@ ul {
 
 .carousel-btn-container button {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   background-repeat: no-repeat;
   padding: 3em;
@@ -186,7 +176,7 @@ ul {
 
 @media (max-width: 1440px) {
   main {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
@@ -195,9 +185,9 @@ ul {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   main {
-    max-width: 968px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
@@ -206,9 +196,9 @@ ul {
   }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
   main {
-    max-width: 767px;
+    max-width: 768px;
     margin: 0 auto;
   }
 
@@ -217,7 +207,11 @@ ul {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
   .visible-item {
     display: block;
   }
@@ -236,6 +230,17 @@ ul {
 
   .visible-item img {
     width: 100%;
+  }
+
+  .carousel-btn-container button {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    max-width: 567px;
+    margin: 0 auto;
   }
 
   .carousel-btn-container button {

@@ -21,6 +21,7 @@ main {
 }
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 1.5em 0em 1.5em 0em;
@@ -55,7 +56,7 @@ ul {
   gap: 1.5em;
 }
 
-.listItems ul li {
+.listItems ul {
   list-style: none;
 }
 
@@ -70,8 +71,41 @@ ul {
 }
 
 .cart {
-  width: 100%;
   padding: 0 3em;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu img {
+  position: absolute;
+  right: 1em;
+  width: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.menuList {
+  flex-direction: column;
+  list-style: none;
+  padding-top: 5em;
+  padding-right: 1em;
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.mobile-menu ul a {
+  color: #9e9fa3;
+  text-decoration: none;
 }
 
 /* .user-avatar {
@@ -220,16 +254,24 @@ ul {
     width: 100%;
   }
 
-  .hero-right h1 {
+  .hero-right h1,
+  .hero-right p,
+  .hero-right h3 {
     text-align: center;
   }
 
-  .hero-right p {
+  /* .hero-right p {
     text-align: center;
+  } */
+
+  .visible-item {
+    margin-top: -3em;
+    margin-bottom: 2em;
   }
 
   .visible-item img {
     width: 100%;
+    margin-bottom: -12em;
   }
 
   .carousel-btn-container button {
@@ -245,5 +287,14 @@ ul {
 
   .carousel-btn-container button {
     padding: 1em;
+  }
+
+  .listItems,
+  .icon {
+    display: none;
+  }
+
+  .mobile-menu img {
+    display: block;
   }
 }

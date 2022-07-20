@@ -1,6 +1,8 @@
 const items = document.querySelectorAll(".item");
 const totalItems = items.length; //5
 
+const menuIcon = document.querySelector(".menu-icon");
+
 let itemNo = 0;
 
 document.querySelector(".prev-btn").addEventListener("click", movePrevItem);
@@ -31,3 +33,7 @@ function movePrevItem() {
   }
   items[itemNo].classList.add("visible-item");
 }
+
+menuIcon.addEventListener("click", () => {
+  document.querySelector(".menuList").classList.toggle("visible");
+});

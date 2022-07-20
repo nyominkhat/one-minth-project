@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: #191919;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  position: relative;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0em 1.5em 0em;
+
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.listItems {
+  display: inline-block;
+
+  margin-left: 3em;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.listItems ul li {
+  list-style: none;
+}
+
+.listItems ul li a {
+  color: #9e9fa3;
+  text-decoration: none;
+}
+
+.listItems ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.icon {
+  position: relative;
+}
+
+.cart {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  right: 4.5em;
+  bottom: 1em;
+}
+
+.user-avatar {
+  margin-left: 2em;
+  width: 3rem;
+  height: 3rem;
+}
+
+.hero-left {
+  width: 100%;
+}
+
+.item {
+  display: none;
+}
+
+.visible-item {
+  display: block;
+  margin-top: 6em;
+  display: flex;
+  justify-content: space-between;
+  gap: 7em;
+
+  flex: 1;
+}
+
+.visible-item img {
+  align-self: center;
+  width: 45%;
+}
+
+.hero-right {
+  width: 45%;
+}
+
+.hero-right h1 {
+  margin: 2.5em 0em 2em 0em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.7rem;
+
+  color: #fff;
+  line-height: 1.5;
+}
+
+.hero-right p {
+  font-size: 1rem;
+  color: #76777a;
+  line-height: 1.5;
+}
+
+.hero-right h3 {
+  margin-top: 1.5em;
+
+  color: #fff;
+}
+
+.hero-right small {
+  color: #76777a;
+}
+
+/* .carousel-btn-container { */
+/* position: absolute; */
+/* height: 100%;
+  display: flex; */
+/* justify-content: space-between; */
+/* width: 100%; */
+/* left: 0;
+  top: 0;
+  right: 0; */
+/* transform: translateY(-50%); */
+/* } */
+
+.prev-btn {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.next-btn {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.carousel-btn-container button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  padding: 3em;
+  border: none;
+  opacity: 0.5;
+}
+
+.carousel-btn-container button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.carousel-btn-container button:active {
+  opacity: 0.5;
+}
+
+@media (max-width: 1440px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .carousel-btn-container button {
+    padding: 2.5em;
+  }
+}
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 968px;
+    margin: 0 auto;
+  }
+
+  .carousel-btn-container button {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 968px) {
+  main {
+    max-width: 767px;
+    margin: 0 auto;
+  }
+
+  .carousel-btn-container button {
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-item {
+    display: block;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right h1 {
+    text-align: center;
+  }
+
+  .hero-right p {
+    text-align: center;
+  }
+
+  .visible-item img {
+    width: 100%;
+  }
+
+  .carousel-btn-container button {
+    padding: 1em;
+  }
+}

@@ -298,3 +298,10 @@ ul {
     display: block;
   }
 }
+
+@media (max-width: 480px) {
+  .prev-btn,
+  .next-btn {
+    top: 7rem;
+  }
+}
